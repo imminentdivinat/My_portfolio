@@ -30,10 +30,10 @@ export default function Home() {
 
         {/* Social Links */}
         <div className="mt-4 flex gap-6 justify-center">
-          <a href="https://www.linkedin.com/in/your-link" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400 text-3xl transition-transform transform hover:scale-110">
+          <a href="https://www.linkedin.com/in/junrey-rivera-1a800b375/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400 text-3xl transition-transform transform hover:scale-110">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-3xl transition-transform transform hover:scale-110">
+          <a href="https://github.com/imminentdivinat" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-3xl transition-transform transform hover:scale-110">
             <FaGithub />
           </a>
         </div>
