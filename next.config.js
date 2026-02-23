@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // important: creates static HTML files
-  trailingSlash: true, // optional: adds / at the end for routes
+  output: 'export',        // generate static HTML for Netlify
+  trailingSlash: true,     // adds / at the end of routes, avoids 404s
+  reactStrictMode: true,
 }
 
 module.exports = nextConfig;
