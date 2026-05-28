@@ -34,6 +34,14 @@ type Project = {
   github: string;
 };
 
+type Award = {
+  title: string;
+  year: string;
+  text: string;
+  tags: string[];
+  file?: string;
+};
+
 const contact = {
   email: "jreyriveraa@gmail.com",
   phone: "+63 991 400 6776",
@@ -45,24 +53,27 @@ const socials = {
   linkedin: "https://www.linkedin.com/in/junrey-rivera-1a800b375/",
 };
 
-const awards = [
+const awards: Award[] = [
   {
-    title: "Sample Web Development Certificate",
+    title: "Google AI Certificate",
     year: "2026",
-    text: "Temporary certification copy for a completed web development program covering responsive interfaces, backend fundamentals, and project deployment.",
-    tags: ["Certificate", "Web Dev", "Responsive UI", "Deployment"],
+    text: "Completed Google AI training focused on practical AI concepts, responsible use, productivity workflows, and applying AI tools to real business tasks.",
+    tags: ["Google AI", "Certificate", "AI Tools", "Responsible AI"],
+    file: "/Coursera CZ7TR5GRSCBN.pdf",
   },
   {
-    title: "Sample Automation Workshop",
-    year: "2025",
-    text: "Placeholder achievement for an automation workshop focused on streamlining business processes, integrating tools, and improving task handoffs.",
-    tags: ["Automation", "Workflow", "Tools"],
+    title: "AI Mastery for Professionals",
+    year: "2026",
+    text: "Professional AI training covering prompt strategy, workflow improvement, content creation, business productivity, and practical AI implementation.",
+    tags: ["AI Mastery", "Prompting", "Productivity", "Workflows"],
+    file: "/Coursera H5LESQBL81FM.pdf",
   },
   {
-    title: "Sample AI Creative Design Recognition",
-    year: "2025",
-    text: "Dummy award description for AI-assisted visual content, including business ad images, promo graphics, and stylized Webtoon image concepts.",
-    tags: ["AI Images", "Graphic Design", "Webtoon Art"],
+    title: "Full-Stack Development Assessment",
+    year: "2026",
+    text: "Completed a full-stack development assessment covering frontend implementation, backend fundamentals, application structure, and practical web development skills.",
+    tags: ["Full-Stack", "Assessment", "Frontend", "Backend"],
+    file: "/Coursera LUU4T422ZBMA.pdf",
   },
 ];
 
@@ -85,44 +96,45 @@ const skillGroups = [
   },
   {
     title: "Tools",
-    skills: ["Git", "Framer Motion", "Canva", "Figma Handoff", "Deployment", "Debugging"],
+    skills: ["Git", "ChatGPT", "Copilot", "Canva", "VSCode", "Github" , "Grok"],
   },
 ];
 
 const projects: Project[] = [
   {
-    title: "Inventory System",
-    image: "INV",
+    title: "Barangay 27 System",
+    image: "/Brgy.png",
     summary:
-      "A full-stack inventory platform for tracking products, users, roles, and day-to-day stock movement with a practical admin workflow.",
+      "A Next.js-based barangay management system for organizing local community records, resident-facing services, and administrative workflows for Barangay 27.",
     features: [
-      "Role-based access for administrators and staff",
-      "Product, category, and stock movement management",
-      "Searchable records for faster operations",
-      "Dashboard-ready structure for reporting",
+      "Centralized barangay dashboard for managing community information and service requests",
+      "Resident record structure designed for faster lookup and cleaner administrative tracking",
+      "Digital forms and workflows for barangay-level documents, announcements, and requests",
+      "Responsive Next.js interface built for staff use across desktop and mobile screens",
     ],
-    tags: ["React", "Laravel", "MySQL", "CRUD"],
-    live: "https://example.com/inventory-demo",
-    github: "https://example.com/inventory-code",
+    tags: ["Next.js", "Barangay System", "Community Records", "Admin Dashboard", "MongoDB"],
+    live: "https://github.com/imminentdivinat/Barangay-27-System",
+    github: "https://github.com/imminentdivinat/Barangay-27-System",
   },
   {
-    title: "E-commerce App",
-    image: "SHOP",
+    title: "CoreTek Digital Solutions",
+    image: "/CoreTek.png",
     summary:
-      "A storefront and checkout simulation focused on clean browsing, cart management, and conversion-friendly product flows.",
+      "CoreTek delivers scalable, mobile‑first, and conversion‑driven digital ecosystems that streamline workflows and enhance customer experiences.",
     features: [
-      "Product listing and cart interactions",
-      "Checkout simulation with clear totals",
-      "Mobile-first customer journey",
-      "Reusable UI components for catalog pages",
+      "E‑Commerce Enablement – Smart storefronts & checkout flows",
+      "Digital Platforms – Modular, reusable UI components",
+      "Mobile Optimization – Seamless journeys across devices",
+      "Workflow Automation – Efficiency through intelligent processes",
+      "Data Insights – Actionable analytics for growth",
     ],
-    tags: ["React", "Tailwind", "Cart", "Checkout"],
-    live: "https://example.com/ecommerce-demo",
-    github: "https://example.com/ecommerce-code",
+    tags: ["Next.js", "Tailwind", "Netlify", "Digital Solutions"],
+    live: "https://coretekdigital.netlify.app/",
+    github: "https://github.com/CoreTek-Digital-Solutions/coretek",
   },
   {
     title: "AI Visual Content Pack",
-    image: "AIMG",
+    image: "/samplead.png",
     summary:
       "A creative content set for businesses using AI image generation and graphic design direction for ads, promos, sold-out announcements, and social posts.",
     features: [
@@ -132,8 +144,8 @@ const projects: Project[] = [
       "Reusable content formats for fast marketing updates",
     ],
     tags: ["AI Images", "Graphic Design", "Ads", "Promo"],
-    live: "https://example.com/ai-content-demo",
-    github: "https://example.com/ai-content-portfolio",
+    live: "https://drive.google.com/drive/u/5/folders/12KQdNdAgFTXNftoPNeyIhtUg1iRBEAOE",
+    github: " ",
   },
   {
     title: "Automation Dashboard",
@@ -155,7 +167,7 @@ const projects: Project[] = [
 const experiences = [
   {
     role: "AI Image Content Creator",
-    company: "Sample Creative Projects",
+    company: "Freelance",
     date: "Recent Experience",
     bullets: [
       "Create AI-assisted images for business ads, promotional posts, and sold-out announcements.",
@@ -165,7 +177,7 @@ const experiences = [
   },
   {
     role: "Full-Stack Developer",
-    company: "Sample Digital Solutions",
+    company: "CoreTek Digital Solutions",
     date: "Jan 2025 - Present",
     bullets: [
       "Build web applications that combine clean interfaces with practical backend workflows.",
@@ -174,9 +186,9 @@ const experiences = [
     ],
   },
   {
-    role: "Automation Builder",
-    company: "Sample Operations Studio",
-    date: "Jun 2024 - Dec 2024",
+    role: "General Virtual Assistant",
+    company: "Upwork Freelance",
+    date: "Jun 2020 - Dec 2022",
     bullets: [
       "Design small automation tools that reduce repeated admin work and manual tracking.",
       "Connect frontend experiences to structured data and reliable operational flows.",
@@ -269,10 +281,10 @@ export default function Home() {
             I build web applications, dashboards, automation systems, and AI-powered visual content for business ads, promos, sold-out posts, and Webtoon-style images.
           </p>
 
-          <div className="mt-7 grid max-w-2xl gap-3 sm:grid-cols-3">
+          <div className="mt-7 flex max-w-3xl flex-wrap gap-3">
             <ContactChip icon={<MapPin size={17} />} text={contact.location} />
             <ContactChip icon={<Phone size={17} />} text={contact.phone} />
-            <ContactChip icon={<Mail size={17} />} text={contact.email} />
+            <ContactChip icon={<Mail size={17} />} text={contact.email} wide />
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -336,13 +348,40 @@ export default function Home() {
               viewport={{ once: true, amount: 0.2 }}
               className="saul-card border-2 p-5"
             >
-              <div className="saul-tag mb-5 grid h-36 place-items-center border-2">
-                <Award size={48} className="saul-text-red" />
-              </div>
+              {award.file ? (
+                <a
+                  href={award.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mb-5 block aspect-video overflow-hidden border-2 border-current bg-white"
+                  aria-label={`Open ${award.title} certificate`}
+                >
+                  <iframe
+                    src={`${award.file}#page=1&view=Fit&toolbar=0&navpanes=0&scrollbar=0`}
+                    title={`${award.title} preview`}
+                    scrolling="no"
+                    className="pointer-events-none h-full w-full overflow-hidden bg-white"
+                  />
+                </a>
+              ) : (
+                <div className="saul-tag mb-5 grid h-56 place-items-center border-2">
+                  <Award size={48} className="saul-text-red" />
+                </div>
+              )}
               <p className="saul-text-red text-sm font-black uppercase">{award.year}</p>
               <h3 className="mt-2 text-xl font-black uppercase">{award.title}</h3>
               <p className="saul-text-body mt-3 leading-7">{award.text}</p>
               <TagList tags={award.tags} />
+              {award.file && (
+                <a
+                  href={award.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="saul-btn-yellow mt-5 inline-flex items-center gap-2 rounded-sm border-2 px-4 py-2 text-sm font-black uppercase transition hover:-translate-y-0.5"
+                >
+                  View Certificate <ArrowUpRight size={16} />
+                </a>
+              )}
             </motion.article>
           ))}
         </div>
@@ -374,17 +413,27 @@ export default function Home() {
             <motion.article
               key={project.title}
               whileHover={{ y: -6 }}
-              className="saul-card flex h-full flex-col border-2"
+              className="saul-card flex h-full flex-col border-2 p-5"
             >
               <button
                 onClick={() => setSelected(project)}
                 className="group flex h-full flex-col text-left"
                 aria-label={`Open ${project.title}`}
               >
-                <div className="saul-project-banner grid h-48 place-items-center border-b-2 text-5xl font-black">
-                  {project.image}
+                <div className="saul-project-banner relative mb-5 block aspect-video overflow-hidden border-2 border-[var(--saul-ink)] bg-white text-5xl font-black">
+                  {project.image.startsWith("/") ? (
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <span className="grid h-full place-items-center">{project.image}</span>
+                  )}
                 </div>
-                <div className="flex flex-1 flex-col p-5">
+                <div className="flex flex-1 flex-col">
                   <h3 className="text-2xl font-black uppercase">{project.title}</h3>
                   <p className="saul-text-body mt-3 leading-7">{project.summary}</p>
                   <TagList tags={project.tags} />
@@ -569,11 +618,11 @@ function Section({
   );
 }
 
-function ContactChip({ icon, text }: { icon: React.ReactNode; text: string }) {
+function ContactChip({ icon, text, wide = false }: { icon: React.ReactNode; text: string; wide?: boolean }) {
   return (
-    <div className="saul-chip flex min-h-14 items-center gap-2 rounded-sm border-2 px-3 py-2 text-sm font-bold">
-      <span className="saul-text-red">{icon}</span>
-      <span className="break-words">{text}</span>
+    <div className={`saul-chip flex min-h-14 items-center gap-2 rounded-sm border-2 px-3 py-2 text-sm font-bold ${wide ? "min-w-full sm:min-w-80" : "min-w-48"}`}>
+      <span className="saul-text-red shrink-0">{icon}</span>
+      <span className={wide ? "break-normal" : "break-words"}>{text}</span>
     </div>
   );
 }
@@ -589,6 +638,3 @@ function TagList({ tags }: { tags: string[] }) {
     </div>
   );
 }
-
-
-
